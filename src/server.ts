@@ -1,16 +1,16 @@
-/* eslint-disable no-console */
+// tslint:disable-next-line: no-var-requires
 require('dotenv').config()
+import bodyParser from 'body-parser'
+import "colors"
 import express from 'express'
 import next from 'next'
-import bodyParser from 'body-parser'
-import { connectDB } from './db'
 import { parse } from 'url'
-import "colors"
+import { connectDB } from './db'
 
-const dev = process.env.NODE_ENV !== 'production'
+const dev: boolean = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
-const port = process.env.PORT || 3000
+const port: string | number = process.env.PORT || 3000
 
 app.prepare().then(async () => {
 
@@ -24,8 +24,8 @@ app.prepare().then(async () => {
     handle(req, res, parseUrl)
   })
 
-  server.listen(port, err => {
-    if (err) throw err
-    else console.log(`Server is listening on ${port}`.bgGreen)
+  server.listen(port, () => {
+    // tslint:disable-next-line: no-console
+    console.log(`Server is listening on ${port}`.bgGreen)
   })
 })
