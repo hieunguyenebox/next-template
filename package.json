@@ -1,0 +1,35 @@
+{
+  "name": "sell-bot-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=local gulp dev",
+    "build": "NODE_ENV=production gulp build && next build",
+    "start": "NODE_ENV=production node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "core-js": "^3.2.1",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-nodemon": "^2.4.2",
+    "mongoose": "^5.7.3",
+    "next": "^9.0.7",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.2",
+    "nodemon": "^1.19.3"
+  }
+}
