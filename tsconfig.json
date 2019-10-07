@@ -17,14 +17,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "types/*",
+        "node_modules/*"
+      ]
+    }
   },
   "exclude": [
     "node_modules"
   ],
   "include": [
     "next-env.d.ts",
-    "types/*",
     "**/*.ts",
     "**/*.tsx"
   ]
